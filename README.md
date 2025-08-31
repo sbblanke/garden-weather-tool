@@ -5,18 +5,21 @@ A Python-based weather analysis tool specifically designed for gardeners. Provid
 ## 🌟 Features
 
 ### Weather Data Integration
+
 - **Direct API Integration**: Connects to OpenWeatherMap API with professional authentication handling
 - **Multiple Location Methods**: Support for city names, ZIP codes, and GPS coordinates
 - **Real-time Data**: Live weather conditions updated from official sources
 - **Location Precision**: ZIP-code level accuracy for microclimate considerations
 
 ### Garden-Specific Intelligence
+
 - **Frost Risk Assessment**: Automatic alerts for plant protection needs
 - **Watering Recommendations**: Smart watering advice based on humidity levels
 - **Planting Condition Analysis**: Optimal timing assessments for garden activities
 - **Temperature Monitoring**: Tracks conditions critical for plant health
 
 ### Professional Architecture
+
 - **Modular Design**: Separate components for API client, data parsing, and user interface
 - **Error Handling**: Comprehensive HTTP status code management and user-friendly error messages
 - **Secure Configuration**: API key management with environment variables
@@ -25,34 +28,39 @@ A Python-based weather analysis tool specifically designed for gardeners. Provid
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Python 3.7 or higher
 - OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org/api))
 
 ### Setup Instructions
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/sbblanke/garden-weather-advisor.git
    cd garden-weather-advisor
    ```
 
 2. **Create virtual environment:**
+
    ```bash
    python -m venv venv
-   
+
    # Windows
    venv\Scripts\Activate.ps1
-   
-   # Mac/Linux  
+
+   # Mac/Linux
    source venv/bin/activate
    ```
 
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Configure API key:**
+
    - Create a `.env` file in the project root
    - Add your OpenWeatherMap API key:
      ```
@@ -67,39 +75,47 @@ A Python-based weather analysis tool specifically designed for gardeners. Provid
 ## 📖 Usage
 
 ### Basic Usage
+
 ```bash
 python main.py
 ```
 
 ### Location Options
+
 The advisor supports three location input methods:
 
-1. **City Name**: `Clayton`, `Concord`, `Raleigh`
-2. **ZIP Code**: `27520`, `28025`, `28083` (most precise)
+1. **City Name**: `Charlotte`, `Chicago`, `Columbus`
+2. **ZIP Code**: `28202`, `60612`, `43215` (most precise)
 3. **GPS Coordinates**: Exact latitude/longitude for your garden location
 
 ### Example Output
+
 ```
 🌱 Garden Weather Advisor
 ========================================
+🌱 Garden Weather Advisor
+========================================
+
 📍 How would you like to specify your location?
-1. City name (e.g., 'Clayton')
-2. ZIP code (e.g., '27520')  
+1. City name (e.g., 'Columbus')
+2. ZIP code (e.g., '43215')
 3. GPS coordinates (most precise)
 Enter choice (1-3): 2
-Enter ZIP code: 27520
+Enter ZIP code: 60612
 
-🌤️  Getting weather for ZIP 27520...
-🌱 Garden Weather Report for Clayton
+🌤️  Getting weather for ZIP 60612...
+Status Code: 200
+
+🌱 Garden Weather Report for Chicago
 --------------------------------------------------
-🌡️  Temperature: 67.5°F (feels like 67.9°F)
-💧 Humidity: 84%
-☁️  Conditions: Clear Sky
+🌡️  Temperature: 72.4°F (feels like 72.2°F)
+💧 Humidity: 61%
+☁️  Conditions: Broken Clouds
 
 🌱 GARDEN INSIGHTS:
 ❄️  Frost Risk: LOW - Plants are safe
-💧 Watering: LOW - High humidity, reduce watering  
-🌿 Planting Conditions: GOOD - Suitable for most plants
+💧 Watering: LOW - High humidity, reduce watering
+🌿 Planting Conditions: EXCELLENT - Perfect for planting!
 ```
 
 ## 🏗️ Project Structure
@@ -125,17 +141,20 @@ garden_weather_advisor/
 ## 🔧 Technical Details
 
 ### API Integration
+
 - **Direct HTTP Requests**: Uses `requests` library for full control over API communication
 - **Authentication**: Secure API key management with `python-dotenv`
 - **Error Handling**: Comprehensive HTTP status code handling (401, 404, 500, etc.)
 - **Response Processing**: Manual JSON parsing and validation
 
 ### Garden Intelligence Algorithms
+
 - **Frost Risk**: Temperature-based assessment with three alert levels
 - **Watering Logic**: Humidity-driven recommendations for water management
 - **Planting Conditions**: Multi-factor analysis of temperature and humidity
 
 ### Security
+
 - ✅ API keys stored in environment variables
 - ✅ `.env` files excluded from version control
 - ✅ No hardcoded credentials in source code
@@ -150,11 +169,13 @@ garden_weather_advisor/
 ## 🌱 Garden Use Cases
 
 ### Daily Gardening Decisions
+
 - **Morning Check**: Frost protection needs before sunrise
 - **Watering Schedule**: Smart irrigation based on humidity forecasts
 - **Planting Windows**: Optimal conditions for seed starting
 
 ### Seasonal Planning
+
 - **Spring Setup**: Last frost date considerations
 - **Summer Care**: Heat stress and watering optimization
 - **Fall Preparation**: First frost protection planning
@@ -162,12 +183,15 @@ garden_weather_advisor/
 ## 🚀 Future Enhancements (Planned)
 
 ### Phase 2: Enhanced Intelligence
+
 - 🌤️ **5-Day Forecast**: Extended planning for planting and harvesting
 - 📊 **Historical Comparisons**: Seasonal trend analysis
 - 🌿 **Plant-Specific Alerts**: Customized advice for different crops
 - 📅 **Seasonal Calendar**: Automated gardening task scheduling
+- 💾 **GPS Coordinate Enhancement**: Detailed format expectations for GPS coordinates
 
-### Phase 3: Professional Features  
+### Phase 3: Professional Features
+
 - 💾 **Data Caching**: Offline capability and reduced API costs
 - 📧 **Alert System**: Automated frost warnings and optimal condition notifications
-- 📊 **Report
+- 📊 \*\*Report

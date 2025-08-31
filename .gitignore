@@ -3,7 +3,7 @@ venv/
 __pycache__/
 *.pyc
 
-# Environment variables (NEVER commit API keys!)
+# Environment variables
 .env
 
 # Data files
@@ -17,3 +17,6 @@ data/*.csv
 # OS files
 .DS_Store
 Thumbs.db
+
+# Notes
+future.txt

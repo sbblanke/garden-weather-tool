@@ -5,8 +5,9 @@ from weather_api.parser import GardenWeatherParser
 def get_location_input():
     """Get user's preferred location method"""
     print("\n📍 How would you like to specify your location?")
-    print("1. City name (e.g., 'Concord')")
-    print("2. ZIP code (e.g., '28025')")  # Concord, NC ZIP
+    print("1. City name (e.g., 'Columbus')")
+    print("2. ZIP code (e.g., '43215')")  
+    # TODO // Fix the GPS Coordinates - currently doesn't accept coordinates in a 00.000000 / N 00° 00' 0.000" format
     print("3. GPS coordinates (most precise)")
     
     choice = input("Enter choice (1-3): ").strip()
